@@ -5,8 +5,6 @@ Qapp/src/main/java/com/carlosjimz87/serializationparcelization/models/CardState.
 `app/src/main/java/com/carlosjimz87/serializationparcelization/models/MeanOfPaymentShortcutsBM.kt,0/a/0a270a09ddfb1c51bd5495edc1d9a4f79fe8c963
 P
  app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
-è
-_app/src/main/java/com/carlosjimz87/serializationparcelization/models/MeanOfPaymentCardInfoBM.kt,e/2/e2ac6207e63bc1c186a3294e5254956e29d02459
 é
 ^app/src/main/java/com/carlosjimz87/serializationparcelization/models/MeanOfPaymentProductBM.kt,8/4/845055dcc61f9c1cab6f294d4e1ca9bb50fc0a60
 ç
@@ -17,7 +15,5 @@ Vapp/src/main/java/com/carlosjimz87/serializationparcelization/models/CardTypeSl
 _app/src/main/java/com/carlosjimz87/serializationparcelization/models/MeanOfPaymentShortcutBM.kt,9/5/9505526e95c063ffa155aebccb38fbcdf05d655a
 
 Oapp/src/main/java/com/carlosjimz87/serializationparcelization/models/EmptyBM.kt,f/5/f5e9805c87ba8406782d58b1d4d817bffb079524
-á
-Wapp/src/main/java/com/carlosjimz87/serializationparcelization/models/MeanOfPaymentBM.kt,1/5/15089ed08db5373a561e0055f9f372c7335dff55
 Ä
 Papp/src/main/java/com/carlosjimz87/serializationparcelization/models2/Product.kt,e/4/e4b6a9809629f8424facde79fef74b2dc573d474

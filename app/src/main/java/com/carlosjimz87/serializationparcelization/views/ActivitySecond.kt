@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.carlosjimz87.serializationparcelization.Constants.FIRST_STATE_BUNDLE_TAG
 import com.carlosjimz87.serializationparcelization.components.ListSimpleBM
 import com.carlosjimz87.serializationparcelization.databinding.ActivitySecondBinding
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.json.Json
 import java.io.Serializable
 
 class ActivitySecond : AppCompatActivity() {
@@ -26,21 +28,25 @@ class ActivitySecond : AppCompatActivity() {
     }
 
     private fun processBundle() {
-        val extra = getObjectFromBundle(FIRST_STATE_BUNDLE_TAG, ListSimpleBM::class.java)
+        val extra = getObjectFromBundle(FIRST_STATE_BUNDLE_TAG, Serializable::class.java)
         extra?.let {
-            binding.textView.text = getString(it.title).also { title ->
-                Log.d(TAG, "onCreate: $title")
+            with(it as ListSimpleBM) {
+                binding.textView.text = getString(it.title).also { title ->
+                    Log.d(TAG, "onCreate: $title")
+                }
             }
+
         }
     }
 
-    private fun <T : Serializable?> getObjectFromBundle(bundleId: String, clazz: Class<T>): T? {
+    private inline fun <reified T : Serializable?> getObjectFromBundle(bundleId: String, clazz: Class<T>): T? {
         return intent.extras?.let { bundle ->
-            if (VERSION.SDK_INT <= VERSION_CODES.TIRAMISU) {
-                bundle.getSerializable(bundleId) as T
-            } else {
-                bundle.getSerializable(bundleId, clazz)
-            }
+//            if (VERSION.SDK_INT <= VERSION_CODES.TIRAMISU) {
+//                bundle.getSerializable(bundleId) as T
+//            } else {
+//                bundle.getSerializable(bundleId, clazz)
+//            }
+            bundle.getString(bundleId)?.let { Json.decodeFromString(it) }
         }
     }
 

@@ -1,5 +1,6 @@
 package com.carlosjimz87.serializationparcelization
 
+import android.util.Log
 import com.carlosjimz87.serializationparcelization.R.drawable
 import com.carlosjimz87.serializationparcelization.R.string
 import com.carlosjimz87.serializationparcelization.components.ListSimpleBM
